@@ -1,0 +1,11 @@
+.primary-btn {
+    -fx-cursor: hand;
+}
+
+.primary-btn:hover {
+    -fx-background-color: #bcbcbc;  /* darker */
+}
+
+.primary-btn:pressed {
+    -fx-background-color: #92ffda;  /* even darker */
+}

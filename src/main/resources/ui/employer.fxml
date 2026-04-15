@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.EmployerController">
+   <content>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="834.0" prefWidth="793.0" style="-fx-background-color: #F8FAFC;">
+         <children>
+            <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#showAssignForm" prefHeight="30.0" prefWidth="158.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Assign Task" textFill="#9bffd9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="267.0" mnemonicParsing="false" onAction="#showPending" prefHeight="30.0" prefWidth="160.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Pending Tasks" textFill="#9bffd9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#showCompleted" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Completed Tasks" textFill="#9bffd9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#showFeedbackForm" prefHeight="30.0" prefWidth="156.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Give Feedback" textFill="#9bffd9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="assignBox" layoutX="251.0" layoutY="24.0" prefHeight="318.0" prefWidth="494.0" style="-fx-background-color: #0F766E; -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f766e" height="16.0" layoutX="-110.0" layoutY="195.0" stroke="#0f766e" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
+                  <TextField fx:id="taskIdField" layoutX="24.0" layoutY="20.0" prefHeight="36.0" prefWidth="433.0" promptText="Task ID" style="-fx-background-radius: 8px;" />
+                  <TextField fx:id="titleField" layoutX="24.0" layoutY="72.0" prefHeight="36.0" prefWidth="434.0" promptText="Title" style="-fx-background-radius: 8px;" />
+                  <TextField fx:id="descField" layoutX="24.0" layoutY="122.0" prefHeight="36.0" prefWidth="434.0" promptText="Description" style="-fx-background-radius: 8px;" />
+                  <ComboBox fx:id="empCombo" layoutX="24.0" layoutY="171.0" prefWidth="150.0" promptText="Select Employee" style="-fx-background-radius: 8px;" />
+                  <TextField fx:id="deadlineField" layoutX="25.0" layoutY="209.0" prefHeight="36.0" prefWidth="434.0" promptText="Deadline" style="-fx-background-radius: 8px;" />
+                  <Button layoutX="24.0" layoutY="258.0" mnemonicParsing="false" onAction="#addTask" prefHeight="36.0" prefWidth="84.0" style="-fx-background-radius: 8px;" styleClass="primary-btn" stylesheets="@../css/button_mouse.css" text="Add Task">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="feedbackBox" layoutX="251.0" layoutY="347.0" prefHeight="260.0" prefWidth="494.0" style="-fx-background-color: #0F766E; -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f766e" height="16.0" layoutX="-110.0" layoutY="26.0" stroke="#0f766e" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
+                  <TextField fx:id="fbIdField" layoutX="27.0" layoutY="18.0" prefHeight="36.0" prefWidth="442.0" promptText="Feedback ID" style="-fx-background-radius: 8px;" />
+                  <TextField fx:id="dateField" layoutX="27.0" layoutY="157.0" prefHeight="36.0" prefWidth="442.0" promptText="Date" style="-fx-background-radius: 8px;" />
+                  <Button layoutX="27.0" layoutY="211.0" mnemonicParsing="false" onAction="#giveFeedback" style="-fx-background-radius: 8px;" styleClass="primary-btn" stylesheets="@../css/button_mouse.css" text="Submit Feedback">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="msgField" layoutX="27.0" layoutY="104.0" prefHeight="36.0" prefWidth="442.0" promptText="Message" style="-fx-background-radius: 8px;" />
+                  <ComboBox fx:id="fbEmpCombo" layoutX="27.0" layoutY="66.0" prefWidth="150.0" promptText="Select Employee" style="-fx-background-radius: 8px;" />
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="outputArea" layoutX="234.0" layoutY="631.0" prefHeight="178.0" prefWidth="532.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

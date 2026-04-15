@@ -1,0 +1,14 @@
+.primary-btn {
+    -fx-background-color: #0F766E;
+    -fx-text-fill: #9bffd9;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.primary-btn:hover {
+    -fx-background-color: #115E59;  /* darker */
+}
+
+.primary-btn:pressed {
+    -fx-background-color: #134E4A;  /*  darker */
+}
