@@ -133,4 +133,33 @@ public class TaskService {
         return tasks;
     }
 
+    public void deleteTask(int taskId) {
+        List<String> lines = FileManager.readAll(FILE);
+        List<String> updated = new ArrayList<>();
+
+        for (String l : lines) {
+            String[] t = l.split(",");
+            // Only keep
+            if (Integer.parseInt(t[0]) != taskId) {
+                updated.add(l);
+            }
+        }
+        // Overwrite
+        FileManager.writeAll(FILE, updated);
+    }
+
+    // Helper method to get all tasks for the deletion dropdown
+    public List<Task> getAllTasks() {
+        List<String> lines = FileManager.readAll(FILE);
+        List<Task> tasks = new ArrayList<>();
+        for (String l : lines) {
+            String[] t = l.split(",");
+            // Creates Task obj
+            tasks.add(new Task(
+                    Integer.parseInt(t[0]), t[1], t[2], t[3], t[4], t[5]
+            ));
+        }
+        return tasks;
+    }
+
 }

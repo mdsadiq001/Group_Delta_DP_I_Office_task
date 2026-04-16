@@ -28,6 +28,7 @@ public class EmployerController {
     private TextField taskIdField, titleField, descField, empIdField, deadlineField;
     @FXML
     private TextField fbIdField, fbEmpField, msgField, dateField;
+    @FXML private ComboBox<String> deleteTaskCombo;
 
     private TaskService taskService = new TaskService();
     private FeedbackService feedbackService = new FeedbackService();
@@ -91,6 +92,7 @@ public class EmployerController {
     @FXML
     public void initialize() {
         loadEmployees();
+        loadDeleteTasks();
     }
 
 
@@ -163,6 +165,37 @@ public class EmployerController {
 
             clearFeedbackForm();
 
+        } catch (Exception e) {
+            outputArea.setText("Error: " + e.getMessage());
+        }
+    }
+
+    // Fills the dropdown with "ID - Title"
+    private void loadDeleteTasks() {
+        deleteTaskCombo.getItems().clear();
+        List<Task> allTasks = taskService.getAllTasks();
+        for (Task t : allTasks) {
+            deleteTaskCombo.getItems().add(t.getTaskId() + " - " + t.getTitle());
+        }
+    }
+
+    //del button
+    @FXML
+    public void handleDeleteTask() {
+        if (deleteTaskCombo.getValue() == null) {
+            outputArea.setText("Please select a task to delete!");
+            return;
+        }
+
+        try {
+            // iid+str
+            String selected = deleteTaskCombo.getValue();
+            int taskId = Integer.parseInt(selected.split(" - ")[0]);
+
+            taskService.deleteTask(taskId);
+            outputArea.setText("Task " + taskId + " deleted successfully!");
+
+            loadDeleteTasks(); // Refresh
         } catch (Exception e) {
             outputArea.setText("Error: " + e.getMessage());
         }
