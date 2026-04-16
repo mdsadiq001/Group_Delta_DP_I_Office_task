@@ -73,9 +73,24 @@ public class EmployeeController {
         List<String> list = feedbackService.getFeedback(currentEmployeeId);
 
         StringBuilder sb = new StringBuilder();
-
+        /*
         for (String f : list) {
             sb.append(f).append("\n");
+        }
+
+         */
+        for (String f : list) {
+
+            String[] t = f.split(",");
+
+            // Safety check
+            if (t.length >= 4) {
+
+                sb.append("Feedback ID: ").append(t[0]).append("\n");
+                sb.append("Message: ").append(t[2]).append("\n");
+                sb.append("Date: ").append(t[3]).append("\n");
+                sb.append("------------------------------\n");
+            }
         }
 
         outputArea.setText(sb.toString());
