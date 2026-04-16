@@ -1,12 +1,12 @@
 .primary-btn {
-    -fx-background-color: #0F766E;
-    -fx-text-fill: #9bffd9;
+    -fx-background-color: #594BA0;
+    -fx-text-fill: #FBFAFB;
     -fx-background-radius: 8px;
     -fx-cursor: hand;
 }
 
 .primary-btn:hover {
-    -fx-background-color: #115E59;  /* darker */
+    -fx-background-color: #7263D9;  /* darker */
 }
 
 .primary-btn:pressed {

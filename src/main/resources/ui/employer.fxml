@@ -11,31 +11,26 @@
 
 <ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.EmployerController">
    <content>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="834.0" prefWidth="793.0" style="-fx-background-color: #F8FAFC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="834.0" prefWidth="793.0" style="-fx-background-color: #41394F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#showAssignForm" prefHeight="30.0" prefWidth="158.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Assign Task" textFill="#9bffd9">
+            <Button layoutX="14.0" layoutY="267.0" mnemonicParsing="false" onAction="#showPending" prefHeight="30.0" prefWidth="160.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Pending Tasks" textFill="#fbfafb">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="14.0" layoutY="267.0" mnemonicParsing="false" onAction="#showPending" prefHeight="30.0" prefWidth="160.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Pending Tasks" textFill="#9bffd9">
+            <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#showCompleted" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Completed Tasks" textFill="#fbfafb">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#showCompleted" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="View Completed Tasks" textFill="#9bffd9">
+            <Button layoutX="17.0" layoutY="486.0" mnemonicParsing="false" onAction="#handleDeleteTask" prefHeight="30.0" prefWidth="156.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Delete Task" textFill="#fbfafb">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="486.0" mnemonicParsing="false" onAction="#handleDeleteTask" prefHeight="30.0" prefWidth="156.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Delete Task" textFill="#9bffd9">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <AnchorPane fx:id="assignBox" layoutX="251.0" layoutY="24.0" prefHeight="318.0" prefWidth="494.0" style="-fx-background-color: #0F766E; -fx-background-radius: 8px;" visible="false" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="24.0">
+            <AnchorPane fx:id="assignBox" layoutX="251.0" layoutY="24.0" prefHeight="318.0" prefWidth="494.0" style="-fx-background-color: #594BA0; -fx-background-radius: 8px;" visible="false" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="24.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f766e" height="16.0" layoutX="-110.0" layoutY="195.0" stroke="#0f766e" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#594ba0" height="16.0" layoutX="-110.0" layoutY="195.0" stroke="#594ba0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
                   <TextField fx:id="taskIdField" layoutX="24.0" layoutY="20.0" prefHeight="36.0" prefWidth="433.0" promptText="Task ID" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
                   <TextField fx:id="titleField" layoutX="24.0" layoutY="72.0" prefHeight="36.0" prefWidth="434.0" promptText="Title" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
                   <TextField fx:id="descField" layoutX="24.0" layoutY="122.0" prefHeight="36.0" prefWidth="434.0" promptText="Description" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
@@ -48,9 +43,9 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="feedbackBox" layoutX="238.4" layoutY="347.0" prefHeight="260.0" prefWidth="494.0" style="-fx-background-color: #0F766E; -fx-background-radius: 8px;" visible="false" AnchorPane.leftAnchor="238.4" AnchorPane.rightAnchor="32.799999999999955" AnchorPane.topAnchor="347.0">
+            <AnchorPane fx:id="feedbackBox" layoutX="238.4" layoutY="347.0" prefHeight="260.0" prefWidth="494.0" style="-fx-background-color: #594BA0; -fx-background-radius: 8px;" visible="false" AnchorPane.leftAnchor="238.4" AnchorPane.rightAnchor="32.799999999999955" AnchorPane.topAnchor="347.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f766e" height="16.0" layoutX="-110.0" layoutY="26.0" stroke="#0f766e" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#594ba0" height="16.0" layoutX="-110.0" layoutY="26.0" stroke="#594ba0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="7.0" style="visibility: true;" width="219.0" />
                   <TextField fx:id="fbIdField" layoutX="27.0" layoutY="18.0" prefHeight="36.0" prefWidth="442.0" promptText="Feedback ID" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" />
                   <TextField fx:id="dateField" layoutX="27.0" layoutY="162.0" prefHeight="36.0" prefWidth="442.0" promptText="Date" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" />
                   <Button layoutX="27.0" layoutY="211.0" mnemonicParsing="false" onAction="#giveFeedback" prefHeight="36.0" style="-fx-background-radius: 8px;" styleClass="primary-btn" stylesheets="@../css/button_mouse.css" text="Submit Feedback" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0">
@@ -62,9 +57,14 @@
                   <ComboBox fx:id="fbEmpCombo" layoutX="27.0" layoutY="66.0" prefWidth="150.0" promptText="Select Employee" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" />
                </children>
             </AnchorPane>
-            <TextArea fx:id="outputArea" layoutX="234.0" layoutY="631.0" prefHeight="171.0" prefWidth="540.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="20.0" />
-            <ComboBox fx:id="deleteTaskCombo" layoutX="17.0" layoutY="530.0" prefHeight="30.0" prefWidth="159.0" promptText="Select task" />
-            <Button layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#showFeedbackForm" prefHeight="30.0" prefWidth="156.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Give Feedback" textFill="#9bffd9">
+            <TextArea fx:id="outputArea" layoutX="234.0" layoutY="631.0" prefHeight="171.0" prefWidth="540.0" style="-fx-background-color: #FBFAFB;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="20.0" />
+            <ComboBox fx:id="deleteTaskCombo" layoutX="17.0" layoutY="530.0" prefHeight="30.0" prefWidth="159.0" promptText="Select task" style="-fx-background-color: #FBFAFB;" />
+            <Button layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#showFeedbackForm" prefHeight="30.0" prefWidth="156.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Give Feedback" textFill="#fbfafb">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#showAssignForm" prefHeight="30.0" prefWidth="158.0" styleClass="primary-btn" stylesheets="@../css/mouse.css" text="Assign Task" textFill="#fbfafb">
                <font>
                   <Font size="14.0" />
                </font>
