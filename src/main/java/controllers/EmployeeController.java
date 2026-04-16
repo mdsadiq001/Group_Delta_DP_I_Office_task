@@ -25,10 +25,8 @@ public class EmployeeController {
     public void setUser(User user) {
         this.currentUser = user;
 
-        //  set id
         this.currentEmployeeId = user.getId();
 
-        //  set dashboard name
         String name = user.getUsername();
         name = name.substring(0,1).toUpperCase() + name.substring(1);
 

@@ -170,7 +170,6 @@ public class EmployerController {
         }
     }
 
-    // Fills the dropdown with "ID - Title"
     private void loadDeleteTasks() {
         deleteTaskCombo.getItems().clear();
         List<Task> allTasks = taskService.getAllTasks();

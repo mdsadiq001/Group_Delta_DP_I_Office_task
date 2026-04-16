@@ -148,7 +148,6 @@ public class TaskService {
         FileManager.writeAll(FILE, updated);
     }
 
-    // Helper method to get all tasks for the deletion dropdown
     public List<Task> getAllTasks() {
         List<String> lines = FileManager.readAll(FILE);
         List<Task> tasks = new ArrayList<>();
