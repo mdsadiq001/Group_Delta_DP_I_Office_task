@@ -8,29 +8,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.EmployeeController">
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.EmployeeController">
    <content>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="806.0" style="-fx-background-color: #F8FAFC;">
+      <AnchorPane prefHeight="602.0" prefWidth="806.0" style="-fx-background-color: #F8FAFC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="53.0" layoutY="110.0" mnemonicParsing="false" onAction="#viewTasks" prefHeight="34.0" prefWidth="146.0" style="-fx-background-color: #0F766E;" text="View Tasks" textFill="#9bffd9">
+            <Button layoutX="53.0" layoutY="100.0" mnemonicParsing="false" onAction="#viewTasks" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #0F766E;" text="View Tasks" textFill="#9bffd9" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button layoutX="52.0" layoutY="160.0" mnemonicParsing="false" onAction="#viewFeedback" prefHeight="33.0" prefWidth="147.0" style="-fx-background-color: #0F766E;" text="View Feedback" textFill="#9bffd9">
+            <Button layoutX="40.0" layoutY="157.0" mnemonicParsing="false" onAction="#viewFeedback" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #0F766E;" text="View Feedback" textFill="#9bffd9" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button layoutX="52.0" layoutY="214.0" mnemonicParsing="false" onAction="#startTimer" prefHeight="32.0" prefWidth="146.0" style="-fx-background-color: #0F766E;" text="Start Timer" textFill="#9bffd9">
+            <Button layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onAction="#startTimer" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #0F766E;" text="Start Timer" textFill="#9bffd9" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button layoutX="52.0" layoutY="264.0" mnemonicParsing="false" onAction="#stopTimer" prefHeight="36.0" prefWidth="148.0" style="-fx-background-color: #0F766E;" text="Stop Timer(Complete)" textFill="#9bffd9">
+            <Button layoutX="40.0" layoutY="271.0" mnemonicParsing="false" onAction="#stopTimer" prefHeight="41.0" prefWidth="160.0" style="-fx-background-color: #0F766E;" text="Stop Timer(Complete)" textFill="#9bffd9" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <ComboBox fx:id="taskCombo" layoutX="220.0" layoutY="215.0" prefHeight="30.0" prefWidth="163.0" promptText="Select a task" />
-            <TextArea fx:id="outputArea" layoutX="223.0" layoutY="300.0" prefHeight="265.0" prefWidth="547.0" style="-fx-border-color: black;" />
-            <Label fx:id="dashboardLabel" layoutX="53.0" layoutY="21.0" prefHeight="30.0" prefWidth="393.0">
+            <ComboBox fx:id="taskCombo" layoutX="220.0" layoutY="214.0" prefHeight="35.0" prefWidth="163.0" promptText="Select a task" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="20.0" />
+            <TextArea fx:id="outputArea" layoutX="223.0" layoutY="260.0" prefHeight="265.0" prefWidth="547.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="20.0" />
+            <Label fx:id="dashboardLabel" layoutX="53.0" layoutY="20.0" prefHeight="30.0" prefWidth="393.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0">
                <font>
                   <Font name="System Bold" size="38.0" />
                </font>
