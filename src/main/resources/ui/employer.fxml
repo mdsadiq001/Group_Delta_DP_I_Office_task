@@ -57,7 +57,7 @@
                   <ComboBox fx:id="fbEmpCombo" layoutX="27.0" layoutY="66.0" prefWidth="150.0" promptText="Select Employee" style="-fx-background-radius: 8px;" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" />
                </children>
             </AnchorPane>
-            <TextArea fx:id="outputArea" editable="false" layoutX="264.8" layoutY="677.8" mouseTransparent="true" prefHeight="146.0" prefWidth="496.0" style="-fx-background-color: #FBFAFB;" AnchorPane.bottomAnchor="10.200000000000045" AnchorPane.leftAnchor="264.8" AnchorPane.rightAnchor="34.39999999999998">
+            <TextArea fx:id="outputArea" editable="false" layoutX="264.8" layoutY="677.8" prefHeight="146.0" prefWidth="496.0" style="-fx-background-color: #FBFAFB;" AnchorPane.bottomAnchor="10.200000000000045" AnchorPane.leftAnchor="264.8" AnchorPane.rightAnchor="34.39999999999998">
                <font>
                   <Font size="14.0" />
                </font></TextArea>
